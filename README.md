@@ -1,62 +1,53 @@
-# 🔍 Hash Table & 🌳 Binary Search Tree
+# 🔍 Hash Table & 🌳 Binary Search Tree (BST)
 
-**Subject:** Algorithms and Data Structures  
-**Student:** Ayazbek Abdanur  
+**Subject:** Algorithms and Data Structures (ADS) / Hashing & Trees  
+**Name:** Abdanur
 
 ## 📌 Project Description
+This repository contains two classic data structures written in **Java**:
 
-This project is the third assignment in the Algorithms and Data Structures course. It consists of two core parts:
+1) A custom **Hash Table** (`MyHashTable<K, V>`) using chaining to handle collisions  
+2) A **Binary Search Tree (BST)** (`BST<K, V>`) that supports insert, search, delete, and in-order traversal
 
-1. **Custom Hash Table** (`MyHashTable<K, V>`) implementation using chaining to resolve collisions.
-2. **Binary Search Tree (BST)** implementation (`BST<K, V>`) with support for insertion, deletion, and in-order traversal through a custom iterator.
-
-The purpose of this assignment was to gain deeper insight into how fundamental data structures function internally by building them from scratch without relying on Java’s built-in collections.
+The goal of this project is to practice how these structures work inside (without using Java’s built-in collections).
 
 ## 💡 Features
+### Hash Table
+- Generic `MyHashTable<K, V>`
+- Collision handling with linked-list chaining
+- Basic operations: `put`, `get`, `remove`, `contains`
+- Bucket size / distribution check (example: `printBucketSizes()`)
 
-### ✅ MyHashTable
-- Custom implementation of a generic hash table.
-- Collision handling via linked list chaining.
-- Custom key class with manually defined `hashCode()` method.
-- Supports `put()`, `get()`, `remove()`, and `contains()` methods.
-- Bucket distribution analyzer with `printBucketSizes()`.
-
-### ✅ BST (Binary Search Tree)
-- Generic implementation using key-value pairs.
-- Full support for:
-  - `put()`, `get()`, and `delete()`
-  - `size()` tracking
-  - In-order traversal via iterator
-- Iterator provides access to both keys and values:
-  ```java
-  for (var node : tree) {
-      System.out.println("key is " + node.getKey() + " and value is " + node.getValue());
-  }
-  ```
+### Binary Search Tree (BST)
+- Generic key-value BST
+- Operations: `put`, `get`, `delete`
+- Size tracking
+- In-order traversal using an iterator (loop through nodes)
 
 ## 📦 Technologies
-
-* Language: **Java**
-* Version Control: **Git & GitHub**
-* IDE: **IntelliJ IDEA**
-* Testing: Manual testing through custom `Main` and `Test` classes
+- **Java**
+- **Data Structures** (Hash Table, BST)
+- Git + GitHub
 
 ## 🚀 How to Run
+1) Clone the repository:
+```bash
+git clone https://github.com/MnstrsParago/ADS.HashTables.BST.git
+cd ADS.HashTables.BST
+```
 
-1. Clone the repository:
+2) Open the project in any Java IDE, or compile from terminal.
 
-   ```bash
-   git clone https://github.com/MnstrsParago/ADS.ASG3.HT_BST
-   cd ADS.ASG3.HT_BST
-   ```
+3) Run the demo/test classes:
+- `Main.java` (hash table demo)
+- `BSTTest.java` (BST demo)
 
-2. Open the project in IntelliJ IDEA or any Java IDE of your choice.
-
-3. Run the following classes:
-
-   * `Main.java` – Demonstrates the hash table functionality with 10,000 entries.
-   * `BSTTest.java` – Demonstrates all BST operations and in-order traversal.
+Example compile/run (simple way):
+```bash
+javac *.java
+java Main
+```
 
 ## 📘 Reflection
-
-This assignment helped me understand how abstract data structures like hash tables and binary trees are implemented and managed internally. It was particularly interesting to work on balancing the hash function manually to achieve uniform distribution across the buckets. Also, implementing in-order traversal and iterator support in BST without relying on Java Collections was a rewarding experience. Overall, this project enhanced both my algorithmic thinking and practical coding skills.
+This project helped me understand hashing and tree logic more clearly.  
+Implementing collisions in a hash table and writing BST traversal made it easier to see how these structures manage data, and why performance depends on good design choices.
